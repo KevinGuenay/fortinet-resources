@@ -1,0 +1,116 @@
+{
+    "attached": [
+        "connector"
+    ],
+    "data": {
+        "connector": [
+            {
+                "action": [
+                    {
+                        "data-ingestion-cron": null,
+                        "data-ingestion-end-time": null,
+                        "data-ingestion-interval-type": 0,
+                        "data-ingestion-interval-value": null,
+                        "data-ingestion-start-time": null,
+                        "data-ingestion-status": 0,
+                        "description": "Retrieves a report for all the endpoint actions within FortiAuthenticator.",
+                        "name": "Get Schema",
+                        "parameters": "{}",
+                        "status": 1
+                    },
+                    {
+                        "data-ingestion-cron": null,
+                        "data-ingestion-end-time": null,
+                        "data-ingestion-interval-type": 0,
+                        "data-ingestion-interval-value": null,
+                        "data-ingestion-start-time": null,
+                        "data-ingestion-status": 0,
+                        "description": "Retrieves a list of users from Fortinet FortiAuthenticator.",
+                        "name": "Get User List",
+                        "parameters": "{}",
+                        "status": 1
+                    },
+                    {
+                        "data-ingestion-cron": null,
+                        "data-ingestion-end-time": null,
+                        "data-ingestion-interval-type": 0,
+                        "data-ingestion-interval-value": null,
+                        "data-ingestion-start-time": null,
+                        "data-ingestion-status": 0,
+                        "description": "Retrieves details of a specific user from Fortinet FortiAuthenticator based on the user ID, username, or email you have specified.",
+                        "name": "Get User",
+                        "parameters": "{}",
+                        "status": 1
+                    },
+                    {
+                        "data-ingestion-cron": null,
+                        "data-ingestion-end-time": null,
+                        "data-ingestion-interval-type": 0,
+                        "data-ingestion-interval-value": null,
+                        "data-ingestion-start-time": null,
+                        "data-ingestion-status": 0,
+                        "description": "Updates the user status of a specific user in Fortinet FortiAuthenticator based on the user ID and status you have specified.",
+                        "name": "Update User Status",
+                        "parameters": "{}",
+                        "status": 1
+                    },
+                    {
+                        "data-ingestion-cron": null,
+                        "data-ingestion-end-time": null,
+                        "data-ingestion-interval-type": 0,
+                        "data-ingestion-interval-value": null,
+                        "data-ingestion-start-time": null,
+                        "data-ingestion-status": 0,
+                        "description": "Retrieves User Lockout Policy details from Fortinet FortiAuthenticator.",
+                        "name": "Get User Lockout Policy",
+                        "parameters": "{}",
+                        "status": 1
+                    }
+                ],
+                "auth-password": [
+                    "ENC",
+                    "SH2Rh9e28yGe26pyUwiMa83wNnGB0njhz4muEn/tOUwC+wjRaV4YdT+QvWQypw="
+                ],
+                "auth-token": [
+                    "ENC",
+                    "SH2AqhLRNXV1WToTe4AsZJDnniG4io8nf70hPx/ecezC6mOcQktix7XfJfWfak="
+                ],
+                "auth-type": 4,
+                "auth-user": "api_admin",
+                "data-ingestion-end-time": null,
+                "data-ingestion-interval-type": 0,
+                "data-ingestion-interval-value": null,
+                "data-ingestion-schedule-mode": 0,
+                "data-ingestion-start-time": null,
+                "data-ingestion-status": 0,
+                "description": "xzH68WwjpmrTFPiWxUwfyVcqIlqYsnqv7eVorOPd",
+                "name": "FortiAuthenticator Connector",
+                "protected": 1,
+                "server-addr": "192.168.1.175",
+                "server-port": 0,
+                "status": 1,
+                "type": "FAC",
+                "uuid": "828715ff-ec3b-4147-806b-098377cb08f9",
+                "verify-ssl": 0
+            }
+        ],
+        "playbook": [
+            {
+                "book": "{ \"play_settings\": { \"play_type\": \"ON_DEMAND\", \"option\": { \"render\": { \"left\": 97.777778, \"top\": 135.555556 } } }, \"tasks\": [ { \"render\": { \"left\": 540, \"top\": 133.888889 }, \"id\": \"placeholder_c8c25231_cada_4f73_bee0_d0442b1ba497\", \"name\": \"GET-USERS\", \"type\": \"FAC_GET_USER_LIST\", \"input\": { \"connector_uuid\": { \"value\": \"828715ff-ec3b-4147-806b-098377cb08f9\" }, \"limit\": { \"datatype\": \"integer\", \"value\": \"${trigger.limit}\" }, \"offset\": { \"datatype\": \"integer\", \"value\": \"${trigger.offset}\" }, \"user_type\": { \"value\": \"ldapusers\" }, \"option\": { \"render\": { \"left\": 540, \"top\": 133.888889 } } }, \"category\": null, \"user_type\": \"ldapusers\", \"connector_type\": \"FAC\" }, { \"render\": { \"left\": 935.555556, \"top\": 135.000000 }, \"id\": \"placeholder_716b95bd_980a_4399_a8ca_f0ba5ae6a27a\", \"name\": \"SEND-POST\", \"type\": \"WEBHOOK_POST_REQUEST\", \"input\": { \"connector_uuid\": { \"value\": \"LAB-GENERIC\" }, \"body\": { \"value\": \"${placeholder_c8c25231_cada_4f73_bee0_d0442b1ba497.user_list}\" }, \"option\": { \"render\": { \"left\": 935.555556, \"top\": 135.000000 } }, \"url\": { \"value\": \"http:\\/\\/192.168.1.151:8081\" } }, \"category\": null, \"body-ancestor\": \"placeholder_c8c25231_cada_4f73_bee0_d0442b1ba497\", \"connector_type\": \"WEBHOOK\", \"url-ancestor\": \"trigger\", \"url-starter-prop\": \"http:\\/\\/192.168.1.151:8081\", \"body-starter-prop\": \"${placeholder_c8c25231_cada_4f73_bee0_d0442b1ba497.user_list['objects'][1]}\", \"body-param\": \"user_list\" }, { \"render\": { \"left\": 538.888889, \"top\": 436.666667 }, \"id\": \"placeholder_e7285a0f_f9c5_46d6_bc4e_b14e07dbe5c3\", \"name\": \"DISABLE-USER\", \"type\": \"FAC_UPDATE_USER_STATUS\", \"input\": { \"connector_uuid\": { \"value\": \"828715ff-ec3b-4147-806b-098377cb08f9\" }, \"userid\": { \"value\": \"${placeholder_c8c25231_cada_4f73_bee0_d0442b1ba497.user_list['objects'][1]['id']}\" }, \"active\": { \"value\": \"Deactivate\" }, \"user_type\": { \"value\": \"ldapusers\" }, \"option\": { \"render\": { \"left\": 538.888889, \"top\": 436.666667 } } }, \"category\": null, \"userid-ancestor\": \"placeholder_c8c25231_cada_4f73_bee0_d0442b1ba497\", \"active\": \"Deactivate\", \"user_type\": \"ldapusers\", \"userid-starter-prop\": \"${placeholder_c8c25231_cada_4f73_bee0_d0442b1ba497.user_list['objects'][1]['id']}\", \"connector_type\": \"FAC\" } ], \"workflow\": [ { \"label\": \"\", \"name\": \"LOCALHOST_CREATE_INCIDENT\", \"source_task\": \"STARTER\", \"target_task\": \"placeholder_c8c25231_cada_4f73_bee0_d0442b1ba497\" }, { \"label\": \"\", \"name\": \"LOCALHOST_CREATE_INCIDENT\", \"source_task\": \"placeholder_c8c25231_cada_4f73_bee0_d0442b1ba497\", \"target_task\": \"placeholder_e7285a0f_f9c5_46d6_bc4e_b14e07dbe5c3\" }, { \"source_task\": \"placeholder_c8c25231_cada_4f73_bee0_d0442b1ba497\", \"target_task\": \"placeholder_716b95bd_980a_4399_a8ca_f0ba5ae6a27a\" } ] }",
+                "created_by": "admin",
+                "created_on": "2026-03-01T10:04:55.301Z",
+                "description": "Disable user using user list output and some formatting. Also send a POST with the user list for debugging",
+                "modified_by": "admin",
+                "modified_on": "2026-03-26T16:52:16.156Z",
+                "name": "FAC-DISABLE-USER",
+                "origin": 0,
+                "protected": 0,
+                "status": 1,
+                "uuid": "98c1c198-8207-448d-aad4-901e818b8e20",
+                "version": "1.0"
+            }
+        ]
+    },
+    "data-type": "txt",
+    "length": 5995
+}

@@ -1,0 +1,67 @@
+{
+    "data": {
+        "basic-handler": [
+            {
+                "auto-raise-incident": 0,
+                "automation-stitch": 0,
+                "content-pack-id": "",
+                "content-pack-uuid": "",
+                "creation-time": 1772371065,
+                "data-selector": "",
+                "description": "",
+                "enable": 1,
+                "enable-time": 0,
+                "handler-id": "b9f_fa0_f53_ae6",
+                "mitre-info": "",
+                "name": "SSH-GOOGLE",
+                "notification": "",
+                "protected": 0,
+                "rule": [
+                    {
+                        "aggregate-expr": "COUNT(*)>=1",
+                        "devtype": 0,
+                        "enable": 1,
+                        "eventstatus": "auto",
+                        "eventtype": null,
+                        "extrainfo": null,
+                        "extrainfo-type": 0,
+                        "filter": [
+                            {
+                                "id": 1,
+                                "key": "dstip",
+                                "oper": 0,
+                                "value": "8.8.8.8"
+                            },
+                            {
+                                "id": 2,
+                                "key": "dstport",
+                                "oper": 0,
+                                "value": "22"
+                            }
+                        ],
+                        "filter-expr": "",
+                        "filter-relation": 0,
+                        "groupby1": "srcip",
+                        "groupby2": "",
+                        "groupby3": "",
+                        "indicator": null,
+                        "logtype": "traffic",
+                        "name": "SSH-GOOGLE",
+                        "risk-severity": 4,
+                        "rule-id": "862_3b4_ac6_22a",
+                        "severity": 2,
+                        "tags": "",
+                        "thres-duration": 1,
+                        "utmevent": ""
+                    }
+                ],
+                "template-url": "",
+                "update-time": 1772371065,
+                "uuid": "",
+                "version": 2
+            }
+        ]
+    },
+    "data-type": "txt",
+    "length": 967
+}

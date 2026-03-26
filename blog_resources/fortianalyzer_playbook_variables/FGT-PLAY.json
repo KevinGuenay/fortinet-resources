@@ -1,0 +1,53 @@
+{
+    "attached": [
+        "connector"
+    ],
+    "data": {
+        "connector": [
+            {
+                "action": null,
+                "auth-password": [
+                    "ENC",
+                    "SH225kn9hI0VgqXnZsMDoADTc7ZUCFylovfU0UtX6HhB5msAumvjGXscivgTxE="
+                ],
+                "auth-token": [
+                    "ENC",
+                    "SH26KDzhJGzLMCJimR6viNATQkGYCntj5geFW1DP7L8x9Z9afXowat+Z/NgWW0="
+                ],
+                "auth-type": 1,
+                "data-ingestion-end-time": null,
+                "data-ingestion-interval-type": 0,
+                "data-ingestion-interval-value": null,
+                "data-ingestion-schedule-mode": 0,
+                "data-ingestion-start-time": null,
+                "data-ingestion-status": 0,
+                "description": "Connector to FortiOS operations",
+                "name": "FortiOS Connector",
+                "protected": 0,
+                "server-port": 0,
+                "status": 1,
+                "type": "FOS",
+                "uuid": "2edd7118-3b0e-448b-bebe-ca7b53a33d9d",
+                "verify-ssl": 0
+            }
+        ],
+        "playbook": [
+            {
+                "book": "{ \"play_settings\": { \"play_type\": \"ON_TRIGGER\", \"trigger\": { \"type\": \"EVENT_TRIGGER\", \"filter\": { \"match_condition\": \"ALL\", \"conditions\": [ { \"field\": \"trigger_name\", \"operator\": \"==\", \"value\": \"SSH-GOOGLE\" } ] }, \"change_types\": [ \"new\" ], \"render\": { \"top\": 100, \"left\": 100 } } }, \"tasks\": [ { \"render\": { \"left\": 646.666667, \"top\": 98.888889 }, \"id\": \"placeholder_b9217112_49b3_44c8_9935_ba63943ecb59\", \"name\": \"EXECUTE-WEBHOOK\", \"type\": \"FOS_WEBHOOK\", \"input\": { \"filter\": null, \"change_types\": [ ], \"schedule\": null, \"option\": { \"render\": { \"left\": 646.666667, \"top\": 98.888889 } }, \"connector_uuid\": { \"value\": \"2edd7118-3b0e-448b-bebe-ca7b53a33d9d\" }, \"action\": { \"device\": { \"value\": \"FGVMSLTM26006351\" }, \"value\": \"Incoming Webhook Call\" }, \"parameters\": { \"value\": [ { \"name\": \"epip\", \"value\": \"${trigger.epip}\" }, { \"name\": \"mkey\", \"value\": \"${trigger.mkey}\" }, { \"name\": \"date\", \"value\": \"${trigger.date}\" } ] }, \"devid\": { \"value\": \"FGVMSLTM26006351\", \"datatype\": \"string\" } }, \"category\": null, \"undefined\": \"FGVMSLTM26006351\", \"epip-ancestor\": \"trigger\", \"mkey-ancestor\": \"trigger\", \"date-ancestor\": \"trigger\", \"connector_type\": \"FOS\" } ], \"workflow\": [ { \"label\": \"\", \"name\": \"LOCALHOST_CREATE_INCIDENT\", \"source_task\": \"STARTER\", \"target_task\": \"placeholder_b9217112_49b3_44c8_9935_ba63943ecb59\" } ] }",
+                "created_by": "admin",
+                "created_on": "2026-03-01T13:23:50.824Z",
+                "description": "Trigger on event handler and execute FortiGate action",
+                "modified_by": "admin",
+                "modified_on": "2026-03-26T18:51:39.415Z",
+                "name": "FGT-PLAY",
+                "origin": 0,
+                "protected": 0,
+                "status": 1,
+                "uuid": "89fb45e0-f873-45e2-bc5f-834c81a304c0",
+                "version": "1.0"
+            }
+        ]
+    },
+    "data-type": "txt",
+    "length": 2511
+}
