@@ -1,0 +1,31 @@
+config router prefix-list
+    edit "PL_RFC1918"
+        config rule
+            edit 1
+                set prefix 192.168.0.0 255.255.0.0
+                unset ge
+                set le 32
+            next
+            edit 2
+                set prefix 172.16.0.0 255.240.0.0
+                unset ge
+                set le 32
+            next
+            edit 3
+                set prefix 10.0.0.0 255.0.0.0
+                unset ge
+                set le 32
+            next
+        end
+    next
+    edit "PL_BRANCH-LOCAL"
+		set comments "METADATA VARIABLES IN FORTIMANAGER NECESSARY FOR BRANCH ID"
+        config rule
+            edit 1
+                set prefix 10.100.0.0 255.255.0.0
+                unset ge
+                unset le
+            next
+        end
+    next
+end

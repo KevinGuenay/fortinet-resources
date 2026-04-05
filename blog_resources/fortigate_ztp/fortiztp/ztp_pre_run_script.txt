@@ -1,0 +1,154 @@
+config system interface
+edit "LO_BGP"
+set vdom "root"
+set ip 172.25.1.252 255.255.255.255
+set allowaccess ping
+set type loopback
+next
+end
+config vpn ipsec phase1-interface
+edit "HUB1-O1"
+set interface "wan1"
+set ike-version 2
+set dhgrp 32
+set proposal aes256gcm-prfsha512
+set keylife 28800
+set peertype any
+set mode-cfg enable
+set remote-gw 192.0.2.1
+set idle-timeout enable
+set idle-timeoutinterval 10
+set net-device enable
+set add-route disable
+set exchange-interface-ip enable
+set exchange-ip-addr4 172.25.1.252
+set auto-discovery-receiver enable
+set psksecret ENC JVojDRO7n0Wkft6+Ts9vwzs0m891XrhCH5/N/fU5xATS+bTAflRfv/tS/vFpjOyZ2+1FZcg+aniAcpQ0uUsUCrBIF6jPfVEfPHSXsZW5KE+DiDoOBWIFp7mgkgdZppgPZWZbaErBlQ0R6koV1N0bCgByN4otCT+nBSU1DorQBa5Z5jifcYIiTtdUk5RulqIjBRcnbFlmMjY3dkVA
+set network-overlay enable
+set network-id 10
+set auto-discovery-shortcuts dependent
+set exchange-fgt-device-id enable
+set transport auto
+set shared-idle-timeout enable
+next
+end
+config vpn ipsec phase2-interface
+edit "HUB1-O1"
+set phase1name "HUB1-O1"
+set proposal aes256gcm
+set auto-negotiate enable
+set dhgrp 32
+set keylifeseconds 3600
+next
+end
+config router prefix-list
+edit "PL_RFC1918"
+config rule
+edit 1
+set prefix 192.168.0.0 255.255.0.0
+unset ge
+set le 32
+next
+edit 2
+set prefix 172.16.0.0 255.240.0.0
+unset ge
+set le 32
+next
+edit 3
+set prefix 10.0.0.0 255.0.0.0
+unset ge
+set le 32
+next
+end
+next
+end
+config router route-map
+edit "RM_SDWAN-OUT"
+config rule
+edit 1
+set match-ip-address "PL_RFC1918"
+next
+end
+next
+end
+config router bgp
+set as "65123"
+set router-id 172.25.0.100
+set keepalive-timer 5
+set holdtime-timer 15
+set ibgp-multipath enable
+set additional-path enable
+set scan-time 15
+set graceful-restart enable
+set recursive-next-hop enable
+set tag-resolve-mode merge
+set recursive-inherit-priority enable
+config neighbor
+edit "172.25.1.254"
+set advertisement-interval 1
+set activate6 disable
+set capability-graceful-restart enable
+set link-down-failover enable
+set soft-reconfiguration enable
+set interface "LO_BGP"
+set remote-as "65123"
+set route-map-out "RM_SDWAN-OUT"
+set keep-alive-timer 5
+set holdtime-timer 3
+set connect-timer 15
+set update-source "LO_BGP"
+set additional-path both
+next
+end
+end
+config system sdwan
+set status enable
+config zone
+edit "SDWAN-HUBS"
+next
+end
+config members
+edit 1
+set interface "HUB1-O1"
+set zone "SDWAN-HUBS"
+set source 172.25.0.100
+next
+end
+end
+config system dhcp server
+del 1
+del 2
+end
+config system ntp
+set server-mode disable
+end
+config firewall address
+del lan
+end
+config firewall policy
+del 1
+end
+config system virtual-switch
+del lan
+end
+config system interface
+del fortilink
+end
+config firewall policy
+edit 0
+set name "DUMMY VPN"
+set srcintf "LO_BGP"
+set dstintf "SDWAN-HUBS"
+set action deny
+set srcaddr "all"
+set dstaddr "all"
+set schedule "always"
+set service "ALL"
+set logtraffic all
+next
+end
+config system central-management
+set type fortimanager
+set serial-number {{fmg-sn}}
+set fmg {{fmg-ip}}
+end

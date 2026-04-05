@@ -1,0 +1,2 @@
+sn,blueprint,name,hostname,branch_id,cluster,wan1_port
+FGT70G5P12345678,FGT70G-SINGLE-WAN,FGT-70G-BRANCH,FGT-70G-BRANCH,100,false,wan1

@@ -1,0 +1,781 @@
+{
+  "__data-source": {
+    "router prefix-list": [
+      {
+        "comments": null,
+        "name": "PL_RFC1918",
+        "rule": [
+          {
+            "action": 0,
+            "flags": 0,
+            "ge": null,
+            "id": 1,
+            "le": 32,
+            "prefix": [
+              "192.168.0.0",
+              "255.255.0.0"
+            ]
+          },
+          {
+            "action": 0,
+            "flags": 0,
+            "ge": null,
+            "id": 2,
+            "le": 32,
+            "prefix": [
+              "172.16.0.0",
+              "255.240.0.0"
+            ]
+          },
+          {
+            "action": 0,
+            "flags": 0,
+            "ge": null,
+            "id": 3,
+            "le": 32,
+            "prefix": [
+              "10.0.0.0",
+              "255.0.0.0"
+            ]
+          }
+        ]
+      }
+    ],
+    "router route-map": [
+      {
+        "comments": null,
+        "name": "RM_SDWAN-1918-OUT",
+        "rule": [
+          {
+            "action": 0,
+            "id": 1,
+            "match-as-path": [],
+            "match-community": [],
+            "match-extcommunity": [],
+            "match-extcommunity-exact": 0,
+            "match-flags": 0,
+            "match-interface": [],
+            "match-ip-address": [
+              "PL_RFC1918"
+            ],
+            "match-ip-nexthop": [],
+            "match-ip6-address": [],
+            "match-ip6-nexthop": [],
+            "match-origin": 0,
+            "match-route-type": 3,
+            "match-suppress": 0,
+            "match-vrf": null,
+            "set-aggregator-as": 0,
+            "set-aggregator-ip": "0.0.0.0",
+            "set-aspath": [],
+            "set-aspath-action": 0,
+            "set-atomic-aggregate": 0,
+            "set-community": [],
+            "set-community-delete": [],
+            "set-dampening-max-suppress": 0,
+            "set-dampening-reachability-half-life": 0,
+            "set-dampening-reuse": 0,
+            "set-dampening-suppress": 0,
+            "set-dampening-unreachability-half-life": 0,
+            "set-extcommunity-rt": [],
+            "set-extcommunity-soo": [],
+            "set-flags": 0,
+            "set-metric": null,
+            "set-metric-type": 3,
+            "set-origin": 0,
+            "set-priority": 0,
+            "set-tag": null
+          }
+        ]
+      }
+    ]
+  },
+  "__info": {
+    "adom": {
+      "branch_pt": 3645,
+      "build": 3645,
+      "mr": 6,
+      "name": "LAB",
+      "oid": 219,
+      "patch": 0,
+      "version": 700
+    },
+    "export_time": "2026-04-05 15:49:40"
+  },
+  "__meta": [
+    {
+      "mode": 1,
+      "mtype": 0,
+      "name": "Company/Organization",
+      "oid": 165,
+      "otype": 0,
+      "rank": -50,
+      "status": 1,
+      "val_sz": 50
+    },
+    {
+      "mode": 1,
+      "mtype": 0,
+      "name": "Address",
+      "oid": 166,
+      "otype": 0,
+      "rank": -10,
+      "status": 1,
+      "val_sz": 150
+    },
+    {
+      "mode": 1,
+      "mtype": 0,
+      "name": "Contact Phone Number",
+      "oid": 167,
+      "otype": 0,
+      "rank": -20,
+      "status": 1,
+      "val_sz": 50
+    },
+    {
+      "mode": 1,
+      "mtype": 0,
+      "name": "Contact Email",
+      "oid": 168,
+      "otype": 0,
+      "rank": -30,
+      "status": 1,
+      "val_sz": 50
+    }
+  ],
+  "bgp-prof": [
+    {
+      "pkg": "BGP_HUB",
+      "router bgp": [
+        {
+          "_auto_override": 1,
+          "additional-path": 1,
+          "additional-path-select": 2,
+          "additional-path-select-vpnv4": 2,
+          "additional-path-select-vpnv6": 2,
+          "additional-path-vpnv4": 0,
+          "additional-path-vpnv6": 0,
+          "additional-path6": 0,
+          "admin-distance": null,
+          "aggregate-address": null,
+          "aggregate-address6": null,
+          "always-compare-med": 0,
+          "as": "65123",
+          "bestpath-as-path-ignore": 0,
+          "bestpath-cmp-confed-aspath": 0,
+          "bestpath-cmp-routerid": 0,
+          "bestpath-med-confed": 0,
+          "bestpath-med-missing-as-worst": 0,
+          "client-to-client-reflection": 1,
+          "cluster-id": "0.0.0.0",
+          "confederation-identifier": 0,
+          "confederation-peers": [],
+          "cross-family-conditional-adv": 0,
+          "dampening": 0,
+          "dampening-max-suppress-time": 60,
+          "dampening-reachability-half-life": 15,
+          "dampening-reuse": 750,
+          "dampening-suppress": 2000,
+          "dampening-unreachability-half-life": 15,
+          "default-local-preference": 100,
+          "deterministic-med": 0,
+          "distance-external": 20,
+          "distance-internal": 200,
+          "distance-local": 200,
+          "ebgp-multipath": 0,
+          "enforce-first-as": 1,
+          "fast-external-failover": 1,
+          "graceful-end-on-timer": 0,
+          "graceful-restart": 1,
+          "graceful-restart-time": 120,
+          "graceful-stalepath-time": 360,
+          "graceful-update-delay": 120,
+          "holdtime-timer": 15,
+          "ibgp-multipath": 1,
+          "ignore-optional-capability": 1,
+          "keepalive-timer": 3,
+          "log-neighbour-changes": 1,
+          "multipath-recursive-distance": 0,
+          "neighbor": null,
+          "neighbor-group": [
+            {
+              "activate": 1,
+              "activate-evpn": 1,
+              "activate-vpnv4": 1,
+              "activate-vpnv6": 1,
+              "activate6": 0,
+              "additional-path": 2,
+              "additional-path-vpnv4": 3,
+              "additional-path-vpnv6": 3,
+              "additional-path6": 3,
+              "adv-additional-path": 2,
+              "adv-additional-path6": 2,
+              "advertisement-interval": 1,
+              "allowas-in-enable": 0,
+              "allowas-in-enable-evpn": 0,
+              "allowas-in-enable-vpnv4": 0,
+              "allowas-in-enable-vpnv6": 0,
+              "allowas-in-enable6": 0,
+              "allowas-in-evpn": 3,
+              "allowas-in-vpnv6": 3,
+              "as-override": 0,
+              "as-override6": 0,
+              "attribute-unchanged": null,
+              "attribute-unchanged-vpnv4": null,
+              "attribute-unchanged-vpnv6": null,
+              "attribute-unchanged6": null,
+              "auth-options": [],
+              "bfd": 0,
+              "capability-default-originate": 0,
+              "capability-default-originate6": 0,
+              "capability-dynamic": 0,
+              "capability-graceful-restart": 1,
+              "capability-graceful-restart-evpn": 0,
+              "capability-graceful-restart-vpnv4": 0,
+              "capability-graceful-restart-vpnv6": 0,
+              "capability-graceful-restart6": 0,
+              "capability-orf": 0,
+              "capability-orf6": 0,
+              "capability-route-refresh": 1,
+              "connect-timer": 2,
+              "default-originate-routemap": [],
+              "default-originate-routemap6": [],
+              "distribute-list-in": [],
+              "distribute-list-in-vpnv4": [],
+              "distribute-list-in-vpnv6": [],
+              "distribute-list-in6": [],
+              "distribute-list-out": [],
+              "distribute-list-out-vpnv4": [],
+              "distribute-list-out-vpnv6": [],
+              "distribute-list-out6": [],
+              "dont-capability-negotiate": 0,
+              "ebgp-enforce-multihop": 0,
+              "ebgp-multihop-ttl": 255,
+              "filter-list-in": [],
+              "filter-list-in-vpnv4": [],
+              "filter-list-in-vpnv6": [],
+              "filter-list-in6": [],
+              "filter-list-out": [],
+              "filter-list-out-vpnv4": [],
+              "filter-list-out-vpnv6": [],
+              "filter-list-out6": [],
+              "holdtime-timer": 3,
+              "interface": [
+                "LO_BGP"
+              ],
+              "keep-alive-timer": 5,
+              "link-down-failover": 1,
+              "local-as": "0",
+              "local-as-no-prepend": 0,
+              "local-as-replace-as": 0,
+              "maximum-prefix": 0,
+              "maximum-prefix-evpn": 0,
+              "maximum-prefix-threshold": 75,
+              "maximum-prefix-threshold-evpn": 75,
+              "maximum-prefix-threshold-vpnv6": 75,
+              "maximum-prefix-threshold6": 75,
+              "maximum-prefix-vpnv4": 0,
+              "maximum-prefix-vpnv6": 0,
+              "maximum-prefix-warning-only": 0,
+              "maximum-prefix-warning-only-evpn": 0,
+              "maximum-prefix-warning-only-vpnv6": 0,
+              "maximum-prefix-warning-only6": 0,
+              "maximum-prefix6": 0,
+              "name": "BRANCHES",
+              "next-hop-self": 0,
+              "next-hop-self-rr": 0,
+              "next-hop-self-rr6": 0,
+              "next-hop-self-vpnv4": 0,
+              "next-hop-self-vpnv6": 0,
+              "next-hop-self6": 0,
+              "override-capability": 0,
+              "passive": 1,
+              "password": [
+                "ENC",
+                "H7UB1Bk1jMvSBXMYu2QNueM3hgOvDvb2JYhC7WY+vUDc8q9L+MDb7iuZZkmFAgiAFCbiUVPZ9wdwkgGHZa+LcpDluUMBMjGUhwxVyJPRcNU8p09HNtahdHikVRSX2eCxT+pj9TZXN7RPFh60x/ovJ3lWk3MAczLrk5XJLY5eBqBUW27AgoNHHk2q9iaeKAQsMctwQA=="
+              ],
+              "prefix-list-in": [],
+              "prefix-list-in-vpnv4": [],
+              "prefix-list-in-vpnv6": [],
+              "prefix-list-in6": [],
+              "prefix-list-out": [],
+              "prefix-list-out-vpnv4": [],
+              "prefix-list-out-vpnv6": [],
+              "prefix-list-out6": [],
+              "remote-as": "65123",
+              "remote-as-filter": [],
+              "remove-private-as": 0,
+              "remove-private-as-evpn": 0,
+              "remove-private-as-vpnv4": 0,
+              "remove-private-as-vpnv6": 0,
+              "remove-private-as6": 0,
+              "restart-time": 0,
+              "retain-stale-time": 0,
+              "route-map-in": [],
+              "route-map-in-evpn": [],
+              "route-map-in-vpnv4": [],
+              "route-map-in-vpnv6": [],
+              "route-map-in6": [],
+              "route-map-out": [
+                "RM_SDWAN-1918-OUT"
+              ],
+              "route-map-out-evpn": [],
+              "route-map-out-preferable": [],
+              "route-map-out-vpnv4": [],
+              "route-map-out-vpnv4-preferable": [],
+              "route-map-out-vpnv6": [],
+              "route-map-out-vpnv6-preferable": [],
+              "route-map-out6": [],
+              "route-map-out6-preferable": [],
+              "route-server-client": 0,
+              "route-server-client-evpn": 0,
+              "route-server-client-vpnv4": 0,
+              "route-server-client-vpnv6": 0,
+              "route-server-client6": 0,
+              "send-community": 3,
+              "send-community-evpn": 3,
+              "send-community-vpnv4": 3,
+              "send-community-vpnv6": 3,
+              "send-community6": 3,
+              "shutdown": 0,
+              "soft-reconfiguration": 1,
+              "soft-reconfiguration-evpn": 0,
+              "soft-reconfiguration-vpnv4": 0,
+              "soft-reconfiguration-vpnv6": 0,
+              "soft-reconfiguration6": 0,
+              "stale-route": 0,
+              "strict-capability-match": 0,
+              "unsuppress-map": [],
+              "unsuppress-map6": [],
+              "update-source": [
+                "LO_BGP"
+              ],
+              "weight": 4294967295
+            }
+          ],
+          "neighbor-range": [
+            {
+              "id": 1,
+              "max-neighbor-num": 0,
+              "neighbor-group": [
+                "BRANCHES"
+              ],
+              "prefix": [
+                "172.25.0.0",
+                "255.255.254.0"
+              ]
+            }
+          ],
+          "neighbor-range6": null,
+          "network": [
+            {
+              "_from": null,
+              "backdoor": 0,
+              "id": 1,
+              "network-import-check": 50,
+              "prefix": [
+                "172.25.0.0",
+                "255.255.254.0"
+              ],
+              "route-map": []
+            },
+            {
+              "_from": null,
+              "backdoor": 0,
+              "id": 2,
+              "network-import-check": 50,
+              "prefix": [
+                "192.168.1.0",
+                "255.255.255.0"
+              ],
+              "route-map": []
+            },
+            {
+              "_from": null,
+              "backdoor": 0,
+              "id": 3,
+              "network-import-check": 50,
+              "prefix": [
+                "172.30.1.254",
+                "255.255.255.255"
+              ],
+              "route-map": []
+            },
+            {
+              "_from": null,
+              "backdoor": 0,
+              "id": 4,
+              "network-import-check": 50,
+              "prefix": [
+                "172.30.3.254",
+                "255.255.255.255"
+              ],
+              "route-map": []
+            }
+          ],
+          "network-import-check": 1,
+          "network6": null,
+          "recursive-inherit-priority": 1,
+          "recursive-next-hop": 1,
+          "redistribute": [
+            {
+              "name": "connected",
+              "route-map": [],
+              "status": 0
+            },
+            {
+              "name": "isis",
+              "route-map": [],
+              "status": 0
+            },
+            {
+              "name": "ospf",
+              "route-map": [],
+              "status": 0
+            },
+            {
+              "name": "rip",
+              "route-map": [],
+              "status": 0
+            },
+            {
+              "name": "static",
+              "route-map": [],
+              "status": 0
+            }
+          ],
+          "redistribute6": [
+            {
+              "name": "connected",
+              "route-map": [],
+              "status": 0
+            },
+            {
+              "name": "isis",
+              "route-map": [],
+              "status": 0
+            },
+            {
+              "name": "ospf",
+              "route-map": [],
+              "status": 0
+            },
+            {
+              "name": "rip",
+              "route-map": [],
+              "status": 0
+            },
+            {
+              "name": "static",
+              "route-map": [],
+              "status": 0
+            }
+          ],
+          "router-id": "172.25.1.254",
+          "scan-time": 15,
+          "synchronization": 0,
+          "tag-resolve-mode": 2,
+          "vrf": null,
+          "vrf6": null
+        }
+      ],
+      "template setting": [
+        {
+          "description": "",
+          "option": 4,
+          "stype": "router_bgp",
+          "widgets": [
+            "router_bgp"
+          ]
+        }
+      ]
+    },
+    {
+      "pkg": "BGP_BRANCHES",
+      "router bgp": [
+        {
+          "_auto_override": 1,
+          "additional-path": 1,
+          "additional-path-select": 2,
+          "additional-path-select-vpnv4": 2,
+          "additional-path-select-vpnv6": 2,
+          "additional-path-vpnv4": 0,
+          "additional-path-vpnv6": 0,
+          "additional-path6": 0,
+          "admin-distance": null,
+          "aggregate-address": null,
+          "aggregate-address6": null,
+          "always-compare-med": 0,
+          "as": "65123",
+          "bestpath-as-path-ignore": 0,
+          "bestpath-cmp-confed-aspath": 0,
+          "bestpath-cmp-routerid": 0,
+          "bestpath-med-confed": 0,
+          "bestpath-med-missing-as-worst": 0,
+          "client-to-client-reflection": 1,
+          "cluster-id": "0.0.0.0",
+          "confederation-identifier": 0,
+          "confederation-peers": [],
+          "cross-family-conditional-adv": 0,
+          "dampening": 0,
+          "dampening-max-suppress-time": 60,
+          "dampening-reachability-half-life": 15,
+          "dampening-reuse": 750,
+          "dampening-suppress": 2000,
+          "dampening-unreachability-half-life": 15,
+          "default-local-preference": 100,
+          "deterministic-med": 0,
+          "distance-external": 20,
+          "distance-internal": 200,
+          "distance-local": 200,
+          "ebgp-multipath": 0,
+          "enforce-first-as": 1,
+          "fast-external-failover": 1,
+          "graceful-end-on-timer": 0,
+          "graceful-restart": 1,
+          "graceful-restart-time": 120,
+          "graceful-stalepath-time": 360,
+          "graceful-update-delay": 120,
+          "holdtime-timer": 15,
+          "ibgp-multipath": 1,
+          "ignore-optional-capability": 1,
+          "keepalive-timer": 5,
+          "log-neighbour-changes": 1,
+          "multipath-recursive-distance": 0,
+          "neighbor": [
+            {
+              "_from": null,
+              "activate": 1,
+              "activate-evpn": 1,
+              "activate-vpnv4": 1,
+              "activate-vpnv6": 1,
+              "activate6": 0,
+              "additional-path": 2,
+              "additional-path-vpnv4": 3,
+              "additional-path-vpnv6": 3,
+              "additional-path6": 3,
+              "adv-additional-path": 2,
+              "adv-additional-path6": 2,
+              "advertisement-interval": 1,
+              "allowas-in-enable": 0,
+              "allowas-in-enable-evpn": 0,
+              "allowas-in-enable-vpnv4": 0,
+              "allowas-in-enable-vpnv6": 0,
+              "allowas-in-enable6": 0,
+              "allowas-in-evpn": 3,
+              "allowas-in-vpnv6": 3,
+              "as-override": 0,
+              "as-override6": 0,
+              "attribute-unchanged": null,
+              "attribute-unchanged-vpnv4": null,
+              "attribute-unchanged-vpnv6": null,
+              "attribute-unchanged6": null,
+              "auth-options": [],
+              "bfd": 0,
+              "capability-default-originate": 0,
+              "capability-default-originate6": 0,
+              "capability-dynamic": 0,
+              "capability-graceful-restart": 1,
+              "capability-graceful-restart-evpn": 0,
+              "capability-graceful-restart-vpnv4": 0,
+              "capability-graceful-restart-vpnv6": 0,
+              "capability-graceful-restart6": 0,
+              "capability-orf": 0,
+              "capability-orf6": 0,
+              "capability-route-refresh": 1,
+              "conditional-advertise": null,
+              "conditional-advertise6": null,
+              "connect-timer": 15,
+              "default-originate-routemap6": [],
+              "distribute-list-in": [],
+              "distribute-list-in-vpnv4": [],
+              "distribute-list-in-vpnv6": [],
+              "distribute-list-in6": [],
+              "distribute-list-out": [],
+              "distribute-list-out-vpnv4": [],
+              "distribute-list-out-vpnv6": [],
+              "distribute-list-out6": [],
+              "dont-capability-negotiate": 0,
+              "ebgp-enforce-multihop": 0,
+              "filter-list-in": [],
+              "filter-list-in-vpnv4": [],
+              "filter-list-in-vpnv6": [],
+              "filter-list-in6": [],
+              "filter-list-out": [],
+              "filter-list-out-vpnv4": [],
+              "filter-list-out-vpnv6": [],
+              "filter-list-out6": [],
+              "holdtime-timer": 3,
+              "interface": [
+                "LO_BGP"
+              ],
+              "ip": "172.25.1.254",
+              "keep-alive-timer": 5,
+              "link-down-failover": 1,
+              "local-as": "0",
+              "local-as-no-prepend": 0,
+              "local-as-replace-as": 0,
+              "maximum-prefix": 0,
+              "maximum-prefix-evpn": 0,
+              "maximum-prefix-threshold": 75,
+              "maximum-prefix-threshold-evpn": 75,
+              "maximum-prefix-threshold-vpnv6": 75,
+              "maximum-prefix-threshold6": 75,
+              "maximum-prefix-vpnv4": 0,
+              "maximum-prefix-vpnv6": 0,
+              "maximum-prefix-warning-only": 0,
+              "maximum-prefix-warning-only-evpn": 0,
+              "maximum-prefix-warning-only-vpnv6": 0,
+              "maximum-prefix-warning-only6": 0,
+              "maximum-prefix6": 0,
+              "next-hop-self": 0,
+              "next-hop-self-rr": 0,
+              "next-hop-self-rr6": 0,
+              "next-hop-self-vpnv4": 0,
+              "next-hop-self-vpnv6": 0,
+              "next-hop-self6": 0,
+              "override-capability": 0,
+              "passive": 0,
+              "password": [
+                "ENC",
+                "GiwBBlI0Wt8Gj/6LglTm/TXLShXLllWtw1pzK7Al8g7nMApoaUVQ2gHkSVOoaE0QV29PFl7v6p9jef1AlFCov7Zkj+t3FIMFmx7zFpqkZMLXy+wZIeOg+xVFyBG1Fg256z1/doIzW/0NmKivbsa6iPsFBslE7azcARFxAAXJLwpOsIzr2Zw+Yurk0Z4cwN+gqq5m6A=="
+              ],
+              "prefix-list-in": [],
+              "prefix-list-in-vpnv4": [],
+              "prefix-list-in-vpnv6": [],
+              "prefix-list-in6": [],
+              "prefix-list-out": [],
+              "prefix-list-out-vpnv4": [],
+              "prefix-list-out-vpnv6": [],
+              "prefix-list-out6": [],
+              "remote-as": "65123",
+              "remove-private-as": 0,
+              "remove-private-as-evpn": 0,
+              "remove-private-as-vpnv4": 0,
+              "remove-private-as-vpnv6": 0,
+              "remove-private-as6": 0,
+              "restart-time": 0,
+              "retain-stale-time": 0,
+              "route-map-in": [],
+              "route-map-in-evpn": [],
+              "route-map-in-vpnv4": [],
+              "route-map-in-vpnv6": [],
+              "route-map-in6": [],
+              "route-map-out": [],
+              "route-map-out-evpn": [],
+              "route-map-out-preferable": [],
+              "route-map-out-vpnv4": [],
+              "route-map-out-vpnv4-preferable": [],
+              "route-map-out-vpnv6": [],
+              "route-map-out-vpnv6-preferable": [],
+              "route-map-out6": [],
+              "route-map-out6-preferable": [],
+              "route-server-client": 0,
+              "route-server-client-evpn": 0,
+              "route-server-client-vpnv4": 0,
+              "route-server-client-vpnv6": 0,
+              "route-server-client6": 0,
+              "send-community": 3,
+              "send-community-evpn": 3,
+              "send-community-vpnv4": 3,
+              "send-community-vpnv6": 3,
+              "send-community6": 3,
+              "shutdown": 0,
+              "soft-reconfiguration": 1,
+              "soft-reconfiguration-evpn": 0,
+              "soft-reconfiguration-vpnv4": 0,
+              "soft-reconfiguration-vpnv6": 0,
+              "soft-reconfiguration6": 0,
+              "stale-route": 0,
+              "strict-capability-match": 0,
+              "unsuppress-map": [],
+              "unsuppress-map6": [],
+              "update-source": [
+                "LO_BGP"
+              ],
+              "weight": 4294967295
+            }
+          ],
+          "neighbor-group": null,
+          "neighbor-range": null,
+          "neighbor-range6": null,
+          "network": null,
+          "network-import-check": 1,
+          "network6": null,
+          "recursive-inherit-priority": 1,
+          "recursive-next-hop": 1,
+          "redistribute": [
+            {
+              "name": "connected",
+              "route-map": [],
+              "status": 0
+            },
+            {
+              "name": "isis",
+              "route-map": [],
+              "status": 0
+            },
+            {
+              "name": "ospf",
+              "route-map": [],
+              "status": 0
+            },
+            {
+              "name": "rip",
+              "route-map": [],
+              "status": 0
+            },
+            {
+              "name": "static",
+              "route-map": [],
+              "status": 0
+            }
+          ],
+          "redistribute6": [
+            {
+              "name": "connected",
+              "route-map": [],
+              "status": 0
+            },
+            {
+              "name": "isis",
+              "route-map": [],
+              "status": 0
+            },
+            {
+              "name": "ospf",
+              "route-map": [],
+              "status": 0
+            },
+            {
+              "name": "rip",
+              "route-map": [],
+              "status": 0
+            },
+            {
+              "name": "static",
+              "route-map": [],
+              "status": 0
+            }
+          ],
+          "scan-time": 15,
+          "synchronization": 0,
+          "tag-resolve-mode": 2,
+          "vrf": null,
+          "vrf6": null
+        }
+      ],
+      "template setting": [
+        {
+          "description": "",
+          "option": 4,
+          "stype": "router_bgp",
+          "widgets": [
+            "router_bgp"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+config router route-map
+    edit "RM_SDWAN-1918-OUT"
+        config rule
+            edit 1
+                set match-ip-address "PL_RFC1918"
+                unset set-ip-prefsrc
+            next
+        end
+    next
+    edit "RM_BRANCHES-OUT"
+        config rule
+            edit 1
+                set match-ip-address "PL_BRANCH-LOCAL"
+                unset set-ip-prefsrc
+            next
+        end
+    next
+end

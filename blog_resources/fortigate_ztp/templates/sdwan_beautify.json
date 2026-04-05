@@ -1,0 +1,1157 @@
+{
+  "__data-source": {
+    "firewall address": [
+      {
+        "_image-base64": null,
+        "agent-id": [],
+        "allow-routing": 1,
+        "associated-interface": [
+          "any"
+        ],
+        "clearpass-spt": 0,
+        "color": 0,
+        "comment": null,
+        "dirty": 1,
+        "dynamic_mapping": null,
+        "fabric-object": 0,
+        "hw-model": null,
+        "hw-vendor": null,
+        "list": null,
+        "name": "RFC1918-10",
+        "node-ip-only": 0,
+        "obj-tag": null,
+        "obj-type": 9,
+        "organization": null,
+        "os": null,
+        "passive-fqdn-learning": 1,
+        "policy-group": null,
+        "route-tag": 0,
+        "sso-attribute-value": [],
+        "subnet": [
+          "10.0.0.0",
+          "255.0.0.0"
+        ],
+        "subnet-name": null,
+        "sw-version": null,
+        "tag-detection-level": null,
+        "tag-type": null,
+        "tag-uuid": null,
+        "tagging": null,
+        "type": 0,
+        "uuid": "cde3297a-2c4f-51f1-5b95-626896be7389"
+      },
+      {
+        "_image-base64": null,
+        "agent-id": [],
+        "allow-routing": 1,
+        "associated-interface": [
+          "any"
+        ],
+        "clearpass-spt": 0,
+        "color": 0,
+        "comment": null,
+        "dirty": 1,
+        "dynamic_mapping": null,
+        "fabric-object": 0,
+        "hw-model": null,
+        "hw-vendor": null,
+        "list": null,
+        "name": "RFC1918-172",
+        "node-ip-only": 0,
+        "obj-tag": null,
+        "obj-type": 9,
+        "organization": null,
+        "os": null,
+        "passive-fqdn-learning": 1,
+        "policy-group": null,
+        "route-tag": 0,
+        "sso-attribute-value": [],
+        "subnet": [
+          "172.16.0.0",
+          "255.240.0.0"
+        ],
+        "subnet-name": null,
+        "sw-version": null,
+        "tag-detection-level": null,
+        "tag-type": null,
+        "tag-uuid": null,
+        "tagging": null,
+        "type": 0,
+        "uuid": "cde331a4-2c4f-51f1-7626-b2fbc16ebd3e"
+      },
+      {
+        "_image-base64": null,
+        "agent-id": [],
+        "allow-routing": 1,
+        "associated-interface": [
+          "any"
+        ],
+        "clearpass-spt": 0,
+        "color": 0,
+        "comment": null,
+        "dirty": 1,
+        "dynamic_mapping": null,
+        "fabric-object": 0,
+        "hw-model": null,
+        "hw-vendor": null,
+        "list": null,
+        "name": "RFC1918-192",
+        "node-ip-only": 0,
+        "obj-tag": null,
+        "obj-type": 9,
+        "organization": null,
+        "os": null,
+        "passive-fqdn-learning": 1,
+        "policy-group": null,
+        "route-tag": 0,
+        "sso-attribute-value": [],
+        "subnet": [
+          "192.168.0.0",
+          "255.255.0.0"
+        ],
+        "subnet-name": null,
+        "sw-version": null,
+        "tag-detection-level": null,
+        "tag-type": null,
+        "tag-uuid": null,
+        "tagging": null,
+        "type": 0,
+        "uuid": "cde33906-2c4f-51f1-f0f3-8ed7029af221"
+      }
+    ],
+    "firewall addrgrp": [
+      {
+        "_image-base64": null,
+        "allow-routing": 1,
+        "category": 0,
+        "color": 0,
+        "comment": null,
+        "dynamic_mapping": null,
+        "exclude": 0,
+        "exclude-member": [],
+        "fabric-object": 0,
+        "member": [
+          "RFC1918-10",
+          "RFC1918-172",
+          "RFC1918-192"
+        ],
+        "name": "RFC1918-GRP",
+        "tagging": null,
+        "type": 3,
+        "uuid": "cde3a04e-2c4f-51f1-0a81-4d42f8cd4834"
+      },
+      {
+        "_image-base64": null,
+        "allow-routing": 1,
+        "category": 0,
+        "color": 0,
+        "comment": null,
+        "dynamic_mapping": null,
+        "exclude": 0,
+        "exclude-member": [],
+        "fabric-object": 0,
+        "member": [
+          "RFC1918-10",
+          "RFC1918-172",
+          "RFC1918-192"
+        ],
+        "name": "RFC1918-GRP",
+        "tagging": null,
+        "type": 3,
+        "uuid": "cde3a04e-2c4f-51f1-0a81-4d42f8cd4834"
+      },
+      {
+        "_image-base64": null,
+        "allow-routing": 1,
+        "category": 0,
+        "color": 0,
+        "comment": null,
+        "dynamic_mapping": null,
+        "exclude": 0,
+        "exclude-member": [],
+        "fabric-object": 0,
+        "member": [
+          "RFC1918-10",
+          "RFC1918-172",
+          "RFC1918-192"
+        ],
+        "name": "RFC1918-GRP",
+        "tagging": null,
+        "type": 3,
+        "uuid": "cde3a04e-2c4f-51f1-0a81-4d42f8cd4834"
+      },
+      {
+        "_image-base64": null,
+        "allow-routing": 1,
+        "category": 0,
+        "color": 0,
+        "comment": null,
+        "dynamic_mapping": null,
+        "exclude": 0,
+        "exclude-member": [],
+        "fabric-object": 0,
+        "member": [
+          "RFC1918-10",
+          "RFC1918-172",
+          "RFC1918-192"
+        ],
+        "name": "RFC1918-GRP",
+        "tagging": null,
+        "type": 3,
+        "uuid": "cde3a04e-2c4f-51f1-0a81-4d42f8cd4834"
+      },
+      {
+        "_image-base64": null,
+        "allow-routing": 1,
+        "category": 0,
+        "color": 0,
+        "comment": null,
+        "dynamic_mapping": null,
+        "exclude": 0,
+        "exclude-member": [],
+        "fabric-object": 0,
+        "member": [
+          "RFC1918-10",
+          "RFC1918-172",
+          "RFC1918-192"
+        ],
+        "name": "RFC1918-GRP",
+        "tagging": null,
+        "type": 3,
+        "uuid": "cde3a04e-2c4f-51f1-0a81-4d42f8cd4834"
+      },
+      {
+        "_image-base64": null,
+        "allow-routing": 1,
+        "category": 0,
+        "color": 0,
+        "comment": null,
+        "dynamic_mapping": null,
+        "exclude": 0,
+        "exclude-member": [],
+        "fabric-object": 0,
+        "member": [
+          "RFC1918-10",
+          "RFC1918-172",
+          "RFC1918-192"
+        ],
+        "name": "RFC1918-GRP",
+        "tagging": null,
+        "type": 3,
+        "uuid": "cde3a04e-2c4f-51f1-0a81-4d42f8cd4834"
+      },
+      {
+        "_image-base64": null,
+        "allow-routing": 1,
+        "category": 0,
+        "color": 0,
+        "comment": null,
+        "dynamic_mapping": null,
+        "exclude": 0,
+        "exclude-member": [],
+        "fabric-object": 0,
+        "member": [
+          "RFC1918-10",
+          "RFC1918-172",
+          "RFC1918-192"
+        ],
+        "name": "RFC1918-GRP",
+        "tagging": null,
+        "type": 3,
+        "uuid": "cde3a04e-2c4f-51f1-0a81-4d42f8cd4834"
+      },
+      {
+        "_image-base64": null,
+        "allow-routing": 1,
+        "category": 0,
+        "color": 0,
+        "comment": null,
+        "dynamic_mapping": null,
+        "exclude": 0,
+        "exclude-member": [],
+        "fabric-object": 0,
+        "member": [
+          "RFC1918-10",
+          "RFC1918-172",
+          "RFC1918-192"
+        ],
+        "name": "RFC1918-GRP",
+        "tagging": null,
+        "type": 3,
+        "uuid": "cde3a04e-2c4f-51f1-0a81-4d42f8cd4834"
+      }
+    ]
+  },
+  "__info": {
+    "adom": {
+      "branch_pt": 3645,
+      "build": 3645,
+      "mr": 6,
+      "name": "LAB",
+      "oid": 219,
+      "patch": 0,
+      "version": 700
+    },
+    "export_time": "2026-04-05 15:56:43"
+  },
+  "__meta": [
+    {
+      "mode": 1,
+      "mtype": 0,
+      "name": "Company/Organization",
+      "oid": 165,
+      "otype": 0,
+      "rank": -50,
+      "status": 1,
+      "val_sz": 50
+    },
+    {
+      "mode": 1,
+      "mtype": 0,
+      "name": "Address",
+      "oid": 166,
+      "otype": 0,
+      "rank": -10,
+      "status": 1,
+      "val_sz": 150
+    },
+    {
+      "mode": 1,
+      "mtype": 0,
+      "name": "Contact Phone Number",
+      "oid": 167,
+      "otype": 0,
+      "rank": -20,
+      "status": 1,
+      "val_sz": 50
+    },
+    {
+      "mode": 1,
+      "mtype": 0,
+      "name": "Contact Email",
+      "oid": 168,
+      "otype": 0,
+      "rank": -30,
+      "status": 1,
+      "val_sz": 50
+    }
+  ],
+  "sdwan-prof": [
+    {
+      "pkg": "SDWAN-BRANCHES",
+      "system sdwan": [
+        {
+          "app-perf-log-period": 0,
+          "duplication": null,
+          "duplication-max-discrepancy": 250,
+          "duplication-max-num": 2,
+          "fail-detect": 0,
+          "health-check": [
+            {
+              "_dynamic-server": [],
+              "addr-mode": 7,
+              "bandwidth-weight": 0,
+              "class-id": [],
+              "detect-mode": 1,
+              "diffservcode": "000000",
+              "dns-match-ip": "0.0.0.0",
+              "dns-request-domain": "www.example.com",
+              "embed-measured-health": 1,
+              "failtime": 5,
+              "fortiguard": 0,
+              "fortiguard-name": [],
+              "ftp-mode": 0,
+              "ha-priority": 1,
+              "http-agent": "Chrome/ Safari/",
+              "interval": 500,
+              "jitter-weight": 0,
+              "latency-weight": 0,
+              "members": [
+                "1",
+                "2"
+              ],
+              "mos-codec": 1,
+              "name": "SLA_HUB",
+              "packet-loss-weight": 0,
+              "probe-count": 30,
+              "probe-packets": 1,
+              "probe-timeout": 500,
+              "protocol": 1,
+              "quality-measured-method": 1,
+              "recoverytime": 5,
+              "server": [
+                "172.26.255.254"
+              ],
+              "sla": [
+                {
+                  "custom-profile-threshold": 0,
+                  "id": 1,
+                  "link-cost-factor": 4,
+                  "mos-threshold": "3.6",
+                  "packetloss-threshold": 5,
+                  "priority-in-sla": 0,
+                  "priority-out-sla": 0
+                }
+              ],
+              "sla-fail-log-period": 10,
+              "sla-id-redistribute": 0,
+              "sla-pass-log-period": 60,
+              "source": "0.0.0.0",
+              "system-dns": 0,
+              "threshold-alert-jitter": 0,
+              "threshold-alert-latency": 0,
+              "threshold-alert-packetloss": 0,
+              "threshold-warning-jitter": 0,
+              "threshold-warning-latency": 0,
+              "threshold-warning-packetloss": 0,
+              "update-cascade-interface": 0,
+              "update-static-route": 0,
+              "vrf": 0
+            },
+            {
+              "_dynamic-server": [],
+              "addr-mode": 7,
+              "bandwidth-weight": 0,
+              "class-id": [],
+              "detect-mode": 1,
+              "diffservcode": "000000",
+              "dns-match-ip": "0.0.0.0",
+              "dns-request-domain": "www.example.com",
+              "embed-measured-health": 0,
+              "failtime": 5,
+              "fortiguard": 0,
+              "fortiguard-name": [],
+              "ftp-mode": 0,
+              "ha-priority": 1,
+              "http-agent": "Chrome/ Safari/",
+              "interval": 500,
+              "jitter-weight": 0,
+              "latency-weight": 0,
+              "members": [
+                "3",
+                "4"
+              ],
+              "mos-codec": 1,
+              "name": "SLA_DNS",
+              "packet-loss-weight": 0,
+              "port": 0,
+              "probe-count": 30,
+              "probe-packets": 1,
+              "probe-timeout": 500,
+              "protocol": 64,
+              "quality-measured-method": 1,
+              "recoverytime": 5,
+              "server": [
+                "208.67.220.220",
+                "9.9.9.9"
+              ],
+              "sla": [
+                {
+                  "custom-profile-threshold": 0,
+                  "id": 1,
+                  "link-cost-factor": 4,
+                  "mos-threshold": "3.6",
+                  "packetloss-threshold": 5,
+                  "priority-in-sla": 0,
+                  "priority-out-sla": 0
+                }
+              ],
+              "sla-fail-log-period": 10,
+              "sla-id-redistribute": 0,
+              "sla-pass-log-period": 60,
+              "source": "0.0.0.0",
+              "system-dns": 0,
+              "threshold-alert-jitter": 0,
+              "threshold-alert-latency": 0,
+              "threshold-alert-packetloss": 0,
+              "threshold-warning-jitter": 0,
+              "threshold-warning-latency": 0,
+              "threshold-warning-packetloss": 0,
+              "update-cascade-interface": 0,
+              "update-static-route": 0,
+              "vrf": 0
+            }
+          ],
+          "health-check-fortiguard": null,
+          "load-balance-mode": 1,
+          "members": [
+            {
+              "_dynamic-member": [],
+              "cost": 0,
+              "gateway": "0.0.0.0",
+              "gateway6": "::",
+              "ingress-spillover-threshold": 0,
+              "interface": [
+                "HUB1-O1"
+              ],
+              "obj seq": 1,
+              "preferred-source": "0.0.0.0",
+              "priority": 1,
+              "priority-in-sla": 0,
+              "priority-out-sla": 0,
+              "priority6": 1024,
+              "seq-num": 1,
+              "source": "0.0.0.0",
+              "source6": "::",
+              "spillover-threshold": 0,
+              "status": 1,
+              "transport-group": 0,
+              "volume-ratio": 1,
+              "weight": 1,
+              "zone": [
+                "SDWAN-HUBS"
+              ]
+            },
+            {
+              "_dynamic-member": [],
+              "cost": 0,
+              "gateway": "0.0.0.0",
+              "gateway6": "::",
+              "ingress-spillover-threshold": 0,
+              "interface": [
+                "HUB1-O2"
+              ],
+              "obj seq": 2,
+              "preferred-source": "0.0.0.0",
+              "priority": 1,
+              "priority-in-sla": 0,
+              "priority-out-sla": 0,
+              "priority6": 1024,
+              "seq-num": 2,
+              "source": "0.0.0.0",
+              "source6": "::",
+              "spillover-threshold": 0,
+              "status": 1,
+              "transport-group": 0,
+              "volume-ratio": 1,
+              "weight": 1,
+              "zone": [
+                "SDWAN-HUBS"
+              ]
+            },
+            {
+              "_dynamic-member": [],
+              "cost": 0,
+              "gateway": "0.0.0.0",
+              "gateway6": "::",
+              "ingress-spillover-threshold": 0,
+              "interface": [
+                "wan1"
+              ],
+              "obj seq": 3,
+              "preferred-source": "0.0.0.0",
+              "priority": 1,
+              "priority-in-sla": 0,
+              "priority-out-sla": 0,
+              "priority6": 1024,
+              "seq-num": 3,
+              "source": "0.0.0.0",
+              "source6": "::",
+              "spillover-threshold": 0,
+              "status": 1,
+              "volume-ratio": 1,
+              "weight": 1,
+              "zone": [
+                "SDWAN-OUTSIDE"
+              ]
+            },
+            {
+              "_dynamic-member": [],
+              "cost": 0,
+              "gateway": "0.0.0.0",
+              "gateway6": "::",
+              "ingress-spillover-threshold": 0,
+              "interface": [
+                "wan2"
+              ],
+              "obj seq": 4,
+              "preferred-source": "0.0.0.0",
+              "priority": 1,
+              "priority-in-sla": 0,
+              "priority-out-sla": 0,
+              "priority6": 1024,
+              "seq-num": 4,
+              "source": "0.0.0.0",
+              "source6": "::",
+              "spillover-threshold": 0,
+              "status": 1,
+              "volume-ratio": 1,
+              "weight": 1,
+              "zone": [
+                "SDWAN-OUTSIDE"
+              ]
+            }
+          ],
+          "neighbor": null,
+          "neighbor-hold-boot-time": 0,
+          "neighbor-hold-down": 0,
+          "neighbor-hold-down-time": 0,
+          "option": null,
+          "service": [
+            {
+              "addr-mode": 7,
+              "agent-exclusive": 0,
+              "default": 0,
+              "dscp-forward": 0,
+              "dscp-reverse": 0,
+              "dst": [
+                "RFC1918-GRP"
+              ],
+              "dst-negate": 0,
+              "end-port": 65535,
+              "end-src-port": 65535,
+              "fib-best-match-force": 0,
+              "gateway": 0,
+              "groups": [],
+              "hold-down-time": 0,
+              "id": 1,
+              "input-device": [],
+              "input-device-negate": 0,
+              "input-zone": [],
+              "internet-service": 0,
+              "internet-service-app-ctrl-category": [],
+              "link-cost-threshold": 10,
+              "load-balance": 0,
+              "minimum-sla-meet-members": 0,
+              "mode": 4,
+              "name": "2-ADVPN",
+              "obj seq": 1,
+              "passive-measurement": 0,
+              "priority-members": [
+                "1",
+                "2"
+              ],
+              "priority-zone": [
+                "SDWAN-HUBS"
+              ],
+              "protocol": 0,
+              "role": 3,
+              "shortcut": 1,
+              "shortcut-priority": 2,
+              "sla": [
+                {
+                  "health-check": [
+                    "SLA_HUB"
+                  ],
+                  "id": 1,
+                  "obj seq": 1
+                }
+              ],
+              "sla-compare-method": 0,
+              "sla-stickiness": 0,
+              "src": [
+                "RFC1918-GRP"
+              ],
+              "src-negate": 0,
+              "standalone-action": 0,
+              "start-port": 1,
+              "start-src-port": 1,
+              "status": 1,
+              "tie-break": 4,
+              "tos": "0x00",
+              "tos-mask": "0x00",
+              "use-shortcut-sla": 1,
+              "users": [],
+              "zone-mode": 0
+            },
+            {
+              "addr-mode": 7,
+              "agent-exclusive": 0,
+              "default": 0,
+              "dscp-forward": 0,
+              "dscp-reverse": 0,
+              "dst": [
+                "RFC1918-GRP"
+              ],
+              "dst-negate": 1,
+              "end-port": 65535,
+              "end-src-port": 65535,
+              "fib-best-match-force": 0,
+              "gateway": 0,
+              "groups": [],
+              "hold-down-time": 0,
+              "id": 2,
+              "input-device": [],
+              "input-device-negate": 0,
+              "input-zone": [],
+              "internet-service": 0,
+              "internet-service-app-ctrl-category": [],
+              "link-cost-threshold": 10,
+              "load-balance": 0,
+              "minimum-sla-meet-members": 0,
+              "mode": 4,
+              "name": "2-ADVPN-DST-NEGATE",
+              "obj seq": 2,
+              "passive-measurement": 0,
+              "priority-members": [
+                "3",
+                "4"
+              ],
+              "priority-zone": [
+                "SDWAN-OUTSIDE"
+              ],
+              "protocol": 0,
+              "role": 3,
+              "shortcut": 1,
+              "shortcut-priority": 2,
+              "sla": [
+                {
+                  "health-check": [
+                    "SLA_DNS"
+                  ],
+                  "id": 1,
+                  "obj seq": 1
+                }
+              ],
+              "sla-compare-method": 0,
+              "sla-stickiness": 0,
+              "src": [
+                "RFC1918-GRP"
+              ],
+              "src-negate": 0,
+              "standalone-action": 0,
+              "start-port": 1,
+              "start-src-port": 1,
+              "status": 1,
+              "tie-break": 4,
+              "tos": "0x00",
+              "tos-mask": "0x00",
+              "use-shortcut-sla": 1,
+              "users": [],
+              "zone-mode": 0
+            }
+          ],
+          "speedtest-bypass-routing": 0,
+          "status": 1,
+          "zone": [
+            {
+              "advpn-select": 0,
+              "minimum-sla-meet-members": 1,
+              "name": "virtual-wan-link",
+              "obj seq": 1,
+              "service-sla-tie-break": 1
+            },
+            {
+              "advpn-health-check": [
+                "SLA_HUB"
+              ],
+              "advpn-select": 1,
+              "minimum-sla-meet-members": 1,
+              "name": "SDWAN-HUBS",
+              "obj seq": 2,
+              "service-sla-tie-break": 3
+            },
+            {
+              "advpn-select": 0,
+              "minimum-sla-meet-members": 1,
+              "name": "SDWAN-OUTSIDE",
+              "obj seq": 3,
+              "service-sla-tie-break": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pkg": "SDWAN-HUBS",
+      "system sdwan": [
+        {
+          "app-perf-log-period": 0,
+          "duplication": null,
+          "duplication-max-discrepancy": 250,
+          "duplication-max-num": 2,
+          "fail-detect": 0,
+          "health-check": [
+            {
+              "_dynamic-server": [],
+              "addr-mode": 7,
+              "bandwidth-weight": 0,
+              "class-id": [],
+              "detect-mode": 1,
+              "diffservcode": "000000",
+              "dns-match-ip": "0.0.0.0",
+              "dns-request-domain": "www.example.com",
+              "embed-measured-health": 0,
+              "failtime": 5,
+              "fortiguard": 0,
+              "fortiguard-name": [],
+              "ftp-mode": 0,
+              "ha-priority": 1,
+              "http-agent": "Chrome/ Safari/",
+              "interval": 500,
+              "jitter-weight": 0,
+              "latency-weight": 0,
+              "members": [
+                "3",
+                "4"
+              ],
+              "mos-codec": 1,
+              "name": "SLA_DNS",
+              "packet-loss-weight": 0,
+              "port": 0,
+              "probe-count": 30,
+              "probe-packets": 1,
+              "probe-timeout": 500,
+              "protocol": 64,
+              "quality-measured-method": 1,
+              "recoverytime": 5,
+              "server": [
+                "208.67.220.220",
+                "9.9.9.9"
+              ],
+              "sla": [
+                {
+                  "custom-profile-threshold": 0,
+                  "id": 1,
+                  "link-cost-factor": 4,
+                  "mos-threshold": "3.6",
+                  "packetloss-threshold": 5,
+                  "priority-in-sla": 0,
+                  "priority-out-sla": 0
+                }
+              ],
+              "sla-fail-log-period": 10,
+              "sla-id-redistribute": 0,
+              "sla-pass-log-period": 60,
+              "source": "0.0.0.0",
+              "system-dns": 0,
+              "threshold-alert-jitter": 0,
+              "threshold-alert-latency": 0,
+              "threshold-alert-packetloss": 0,
+              "threshold-warning-jitter": 0,
+              "threshold-warning-latency": 0,
+              "threshold-warning-packetloss": 0,
+              "update-cascade-interface": 0,
+              "update-static-route": 0,
+              "vrf": 0
+            },
+            {
+              "_dynamic-server": [],
+              "addr-mode": 7,
+              "bandwidth-weight": 0,
+              "class-id": [],
+              "detect-mode": 4,
+              "dns-match-ip": "0.0.0.0",
+              "dns-request-domain": "www.example.com",
+              "embed-measured-health": 1,
+              "failtime": 5,
+              "fortiguard": 0,
+              "fortiguard-name": [],
+              "ftp-mode": 0,
+              "ha-priority": 1,
+              "http-agent": "Chrome/ Safari/",
+              "interval": 500,
+              "jitter-weight": 0,
+              "latency-weight": 0,
+              "members": [
+                "1",
+                "2"
+              ],
+              "mos-codec": 1,
+              "name": "SLA_EMB",
+              "packet-loss-weight": 0,
+              "probe-count": 30,
+              "probe-packets": 1,
+              "quality-measured-method": 1,
+              "recoverytime": 5,
+              "remote-probe-timeout": 5000,
+              "sla": [
+                {
+                  "custom-profile-threshold": 0,
+                  "id": 1,
+                  "link-cost-factor": 4,
+                  "mos-threshold": "3.6",
+                  "packetloss-threshold": 5,
+                  "priority-in-sla": 15,
+                  "priority-out-sla": 25
+                }
+              ],
+              "sla-fail-log-period": 10,
+              "sla-id-redistribute": 1,
+              "sla-pass-log-period": 60,
+              "threshold-alert-jitter": 0,
+              "threshold-alert-latency": 0,
+              "threshold-alert-packetloss": 0,
+              "threshold-warning-jitter": 0,
+              "threshold-warning-latency": 0,
+              "threshold-warning-packetloss": 0,
+              "update-bgp-route": 0
+            }
+          ],
+          "health-check-fortiguard": null,
+          "load-balance-mode": 1,
+          "members": [
+            {
+              "_dynamic-member": [],
+              "cost": 0,
+              "gateway": "0.0.0.0",
+              "gateway6": "::",
+              "ingress-spillover-threshold": 0,
+              "interface": [
+                "BRANCHES1-O1"
+              ],
+              "obj seq": 1,
+              "preferred-source": "0.0.0.0",
+              "priority": 1,
+              "priority-in-sla": 0,
+              "priority-out-sla": 0,
+              "priority6": 1024,
+              "seq-num": 1,
+              "source": "0.0.0.0",
+              "source6": "::",
+              "spillover-threshold": 0,
+              "status": 1,
+              "volume-ratio": 1,
+              "weight": 1,
+              "zone": [
+                "SDWAN-BRANCHES"
+              ]
+            },
+            {
+              "_dynamic-member": [],
+              "cost": 0,
+              "gateway": "0.0.0.0",
+              "gateway6": "::",
+              "ingress-spillover-threshold": 0,
+              "interface": [
+                "BRANCHES1-O2"
+              ],
+              "obj seq": 2,
+              "preferred-source": "0.0.0.0",
+              "priority": 1,
+              "priority-in-sla": 0,
+              "priority-out-sla": 0,
+              "priority6": 1024,
+              "seq-num": 2,
+              "source": "0.0.0.0",
+              "source6": "::",
+              "spillover-threshold": 0,
+              "status": 1,
+              "volume-ratio": 1,
+              "weight": 1,
+              "zone": [
+                "SDWAN-BRANCHES"
+              ]
+            },
+            {
+              "_dynamic-member": [],
+              "cost": 0,
+              "gateway": "0.0.0.0",
+              "gateway6": "::",
+              "ingress-spillover-threshold": 0,
+              "interface": [
+                "port1"
+              ],
+              "obj seq": 3,
+              "preferred-source": "0.0.0.0",
+              "priority": 1,
+              "priority-in-sla": 0,
+              "priority-out-sla": 0,
+              "priority6": 1024,
+              "seq-num": 3,
+              "source": "0.0.0.0",
+              "source6": "::",
+              "spillover-threshold": 0,
+              "status": 1,
+              "volume-ratio": 1,
+              "weight": 1,
+              "zone": [
+                "SDWAN-OUTSIDE"
+              ]
+            },
+            {
+              "_dynamic-member": [],
+              "cost": 0,
+              "gateway": "0.0.0.0",
+              "gateway6": "::",
+              "ingress-spillover-threshold": 0,
+              "interface": [
+                "port2"
+              ],
+              "obj seq": 4,
+              "preferred-source": "0.0.0.0",
+              "priority": 1,
+              "priority-in-sla": 0,
+              "priority-out-sla": 0,
+              "priority6": 1024,
+              "seq-num": 4,
+              "source": "0.0.0.0",
+              "source6": "::",
+              "spillover-threshold": 0,
+              "status": 1,
+              "volume-ratio": 1,
+              "weight": 1,
+              "zone": [
+                "SDWAN-OUTSIDE"
+              ]
+            }
+          ],
+          "neighbor": null,
+          "neighbor-hold-boot-time": 0,
+          "neighbor-hold-down": 0,
+          "neighbor-hold-down-time": 0,
+          "option": null,
+          "service": [
+            {
+              "addr-mode": 7,
+              "agent-exclusive": 0,
+              "default": 0,
+              "dscp-forward": 0,
+              "dscp-reverse": 0,
+              "dst": [
+                "RFC1918-GRP"
+              ],
+              "dst-negate": 0,
+              "end-port": 65535,
+              "end-src-port": 65535,
+              "fib-best-match-force": 0,
+              "gateway": 0,
+              "groups": [],
+              "hold-down-time": 0,
+              "id": 1,
+              "input-device": [],
+              "input-device-negate": 0,
+              "input-zone": [],
+              "internet-service": 0,
+              "internet-service-app-ctrl-category": [],
+              "link-cost-threshold": 10,
+              "load-balance": 0,
+              "minimum-sla-meet-members": 0,
+              "mode": 4,
+              "name": "2-ADVPN",
+              "obj seq": 1,
+              "passive-measurement": 0,
+              "priority-members": [
+                "1",
+                "2"
+              ],
+              "priority-zone": [
+                "SDWAN-BRANCHES"
+              ],
+              "protocol": 0,
+              "role": 3,
+              "shortcut": 1,
+              "shortcut-priority": 2,
+              "sla": [
+                {
+                  "health-check": [
+                    "SLA_EMB"
+                  ],
+                  "id": 1,
+                  "obj seq": 1
+                }
+              ],
+              "sla-compare-method": 0,
+              "sla-stickiness": 0,
+              "src": [
+                "RFC1918-GRP"
+              ],
+              "src-negate": 0,
+              "standalone-action": 0,
+              "start-port": 1,
+              "start-src-port": 1,
+              "status": 1,
+              "tie-break": 4,
+              "tos": "0x00",
+              "tos-mask": "0x00",
+              "use-shortcut-sla": 1,
+              "users": [],
+              "zone-mode": 0
+            },
+            {
+              "addr-mode": 7,
+              "agent-exclusive": 0,
+              "default": 0,
+              "dscp-forward": 0,
+              "dscp-reverse": 0,
+              "dst": [
+                "RFC1918-GRP"
+              ],
+              "dst-negate": 1,
+              "end-port": 65535,
+              "end-src-port": 65535,
+              "fib-best-match-force": 0,
+              "gateway": 0,
+              "groups": [],
+              "hold-down-time": 0,
+              "id": 2,
+              "input-device": [],
+              "input-device-negate": 0,
+              "input-zone": [],
+              "internet-service": 0,
+              "internet-service-app-ctrl-category": [],
+              "link-cost-threshold": 10,
+              "load-balance": 0,
+              "minimum-sla-meet-members": 0,
+              "mode": 4,
+              "name": "2-ADVPN-DST-NEGATE",
+              "obj seq": 2,
+              "passive-measurement": 0,
+              "priority-members": [
+                "3",
+                "4"
+              ],
+              "priority-zone": [
+                "SDWAN-OUTSIDE"
+              ],
+              "protocol": 0,
+              "role": 3,
+              "shortcut": 1,
+              "shortcut-priority": 2,
+              "sla": [
+                {
+                  "health-check": [
+                    "SLA_DNS"
+                  ],
+                  "id": 1,
+                  "obj seq": 1
+                }
+              ],
+              "sla-compare-method": 0,
+              "sla-stickiness": 0,
+              "src": [
+                "RFC1918-GRP"
+              ],
+              "src-negate": 0,
+              "standalone-action": 0,
+              "start-port": 1,
+              "start-src-port": 1,
+              "status": 1,
+              "tie-break": 4,
+              "tos": "0x00",
+              "tos-mask": "0x00",
+              "use-shortcut-sla": 1,
+              "users": [],
+              "zone-mode": 0
+            }
+          ],
+          "speedtest-bypass-routing": 0,
+          "status": 1,
+          "zone": [
+            {
+              "advpn-select": 0,
+              "minimum-sla-meet-members": 1,
+              "name": "virtual-wan-link",
+              "obj seq": 1,
+              "service-sla-tie-break": 1
+            },
+            {
+              "advpn-select": 0,
+              "minimum-sla-meet-members": 1,
+              "name": "SDWAN-OUTSIDE",
+              "obj seq": 2,
+              "service-sla-tie-break": 1
+            },
+            {
+              "advpn-select": 0,
+              "minimum-sla-meet-members": 1,
+              "name": "SDWAN-BRANCHES",
+              "obj seq": 3,
+              "service-sla-tie-break": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

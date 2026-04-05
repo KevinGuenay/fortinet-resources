@@ -1,0 +1,123 @@
+{
+  "__info": {
+    "adom": {
+      "branch_pt": 3645,
+      "build": 3645,
+      "mr": 6,
+      "name": "LAB",
+      "oid": 219,
+      "patch": 0,
+      "version": 700
+    },
+    "export_time": "2026-04-05 15:57:24"
+  },
+  "__meta": [
+    {
+      "mode": 1,
+      "mtype": 0,
+      "name": "Company/Organization",
+      "oid": 165,
+      "otype": 0,
+      "rank": -50,
+      "status": 1,
+      "val_sz": 50
+    },
+    {
+      "mode": 1,
+      "mtype": 0,
+      "name": "Address",
+      "oid": 166,
+      "otype": 0,
+      "rank": -10,
+      "status": 1,
+      "val_sz": 150
+    },
+    {
+      "mode": 1,
+      "mtype": 0,
+      "name": "Contact Phone Number",
+      "oid": 167,
+      "otype": 0,
+      "rank": -20,
+      "status": 1,
+      "val_sz": 50
+    },
+    {
+      "mode": 1,
+      "mtype": 0,
+      "name": "Contact Email",
+      "oid": 168,
+      "otype": 0,
+      "rank": -30,
+      "status": 1,
+      "val_sz": 50
+    }
+  ],
+  "sys-prof": [
+    {
+      "device profile settings": [
+        {
+          "description": null,
+          "enabled-pages": [
+            "dns",
+            "ntp",
+            "email",
+            "admin",
+            "snmp",
+            "repmsg",
+            "ftgd",
+            "log",
+            "interface",
+            "router",
+            "combined"
+          ],
+          "flags": 1
+        }
+      ],
+      "pkg": "default",
+      "system snmp sysinfo": [
+        {
+          "status": 1
+        }
+      ]
+    },
+    {
+      "device profile settings": [
+        {
+          "description": null,
+          "enabled-pages": [
+            "admin"
+          ],
+          "flags": 1
+        }
+      ],
+      "pkg": "SYS_DEFAULT",
+      "system global": [
+        {
+          "admin-https-redirect": 1,
+          "admin-port": 80,
+          "admin-scp": 0,
+          "admin-sport": 8443,
+          "admin-ssh-port": 22,
+          "admin-ssh-v1": 0,
+          "admintimeout": 5,
+          "gui-device-latitude": null,
+          "gui-device-longitude": null,
+          "gui-ipv6": 0,
+          "gui-theme": 11,
+          "hostname": null,
+          "language": 0,
+          "split-port-mode": null,
+          "timezone": [
+            "26"
+          ]
+        }
+      ],
+      "system snmp sysinfo": [
+        {
+          "status": 1
+        }
+      ]
+    }
+  ]
+}

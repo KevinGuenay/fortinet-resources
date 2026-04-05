@@ -1,0 +1,1 @@
+# Associated blog post: [End-to-end FortiGate ZTP with FortiManager for SD-WAN and ADVPN](https://blog.guenay.at/2026/04/05/end-to-end-fortigate-ztp-with-fortimanager-for-sd-wan-and-advpn/)
