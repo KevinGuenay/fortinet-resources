@@ -73,7 +73,7 @@ next
 end
 config router bgp
 set as "65123"
-set router-id 172.25.0.100
+set router-id 172.25.1.252
 set keepalive-timer 5
 set holdtime-timer 15
 set ibgp-multipath enable
@@ -111,25 +111,25 @@ config members
 edit 1
 set interface "HUB1-O1"
 set zone "SDWAN-HUBS"
-set source 172.25.0.100
 next
 end
 end
 config system dhcp server
-del 1
-del 2
+purge
 end
 config system ntp
 set server-mode disable
 end
 config firewall address
 del lan
+del internal
 end
 config firewall policy
-del 1
+purge
 end
 config system virtual-switch
 del lan
+del internal
 end
 config system interface
 del fortilink
