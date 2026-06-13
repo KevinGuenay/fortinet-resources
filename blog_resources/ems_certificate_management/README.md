@@ -1,0 +1,1 @@
+# Associated blog post: [FortiClient EMS certificate management for VPN, full SSL/TLS inspection, and 802.1X](https://blog.guenay.at/2026/06/06/forticlient-ems-certificate-management-for-vpn-full-ssl-tls-inspection-and-802-1x/)
