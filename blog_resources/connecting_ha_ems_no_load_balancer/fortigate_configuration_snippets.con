@@ -1,0 +1,85 @@
+config firewall ldb-monitor
+    edit "tcp8013"
+        set type tcp
+        set interval 10
+        set timeout 2
+        set retry 3
+        set port 8013
+        set src-ip 0.0.0.0
+    next
+end
+config firewall vip
+    edit "EMS-HA-FORTICLIENT"
+        set type server-load-balance
+        set server-type tcp
+        set extip 192.168.1.190
+        set extintf "CLIENTS"
+        set monitor "tcp8013"
+        set extport 8013
+        config realservers
+            edit 1
+                set ip 192.168.1.177
+                set port 8013
+            next
+            edit 2
+                set ip 192.168.1.178
+                set port 8013
+            next
+        end
+    next
+    edit "EMS-HA-FORTIGATE"
+        set type server-load-balance
+        set server-type tcp
+        set extip 192.168.1.190
+        set extintf "LOOPBACK"
+        set monitor "tcp8013"
+        set extport 443
+        config realservers
+            edit 1
+                set ip 192.168.1.177
+                set port 443
+            next
+            edit 2
+                set ip 192.168.1.178
+                set port 443
+            next
+        end
+    next
+end
+config endpoint-control fctems
+    edit 1
+        set status enable
+        set name "ems-ha.ad.labdomain.com"
+        set server "ems-ha.ad.labdomain.com"
+        set source-ip 192.168.1.202
+    next
+end
+config firewall service custom
+    edit "tcp8013"
+        set tcp-portrange 8013
+    next
+end
+config firewall policy
+    edit 0
+        set name "CLIENTS TO EMS-HA"
+        set srcintf "CLIENTS"
+        set dstintf "DMZ"
+        set action accept
+        set srcaddr "all"
+        set dstaddr "EMS-HA-FORTICLIENT"
+        set schedule "always"
+        set service "tcp8013"
+        set logtraffic all
+    next
+	edit 0
+        set name "FORTIGATE TO EMS-HA"
+        set srcintf "UNUSED-VLAN"
+        set dstintf "DMZ"
+        set action accept
+        set srcaddr "all"
+        set dstaddr "EMS-HA-FORTIGATE"
+        set schedule "always"
+        set service "HTTPS"
+        set logtraffic all
+    next
+end

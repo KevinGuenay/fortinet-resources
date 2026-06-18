@@ -1,0 +1,1 @@
+# Associated blog post: [Connecting to an HA FortiClient EMS cluster without an external load balancer](https://blog.guenay.at/2026/06/18/connecting-to-an-ha-forticlient-ems-cluster-without-an-external-load-balancer/)
