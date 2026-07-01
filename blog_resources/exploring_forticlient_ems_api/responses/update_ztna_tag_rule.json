@@ -1,0 +1,10 @@
+{
+   "result":{
+      "retval":1,
+      "message":"Tag 'ZTNA-TAG_API' updated successfully."
+   },
+   "data":{
+      "id":81,
+      "name":"ZTNA-TAG_API"
+   }
+}

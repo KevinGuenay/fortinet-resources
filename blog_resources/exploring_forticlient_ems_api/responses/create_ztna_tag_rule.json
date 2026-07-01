@@ -1,0 +1,32 @@
+{
+   "result":{
+      "retval":1,
+      "message":"Tag 'ZTNA-TAG_API' created successfully."
+   },
+   "data":{
+      "id":81,
+      "tag_uid":"8fa2287f-9c7e-43aa-a792-6cd32b16013f",
+      "name":"ZTNA-TAG_API",
+      "type":"zero_trust",
+      "type_id":1,
+      "detection_level":null,
+      "description":"This is the User Notification Message",
+      "update_time":"2026-06-28T14:24:12.973"
+   }
+},
+{
+   "result":{
+      "retval":1,
+      "message":"Tag 'ZTNA-TAG-CUSTOM-LOGIC_API' created successfully."
+   },
+   "data":{
+      "id":84,
+      "tag_uid":"53cf2c7d-32d7-4e6a-96d6-8ddc228dc742",
+      "name":"ZTNA-TAG-CUSTOM-LOGIC_API",
+      "type":"zero_trust",
+      "type_id":1,
+      "detection_level":null,
+      "description":"This is the User Notification Message",
+      "update_time":"2026-06-28T14:24:13.025"
+   }
+}

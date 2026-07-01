@@ -1,0 +1,1 @@
+# Associated blog post: [Exploring the FortiClient EMS API](https://blog.guenay.at/2026/07/01/exploring-the-forticlient-ems-api/)

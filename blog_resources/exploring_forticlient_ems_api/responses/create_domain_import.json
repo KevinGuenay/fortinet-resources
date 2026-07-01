@@ -1,0 +1,37 @@
+{
+   "result":{
+      "retval":1,
+      "message":"IDP updated successfully."
+   },
+   "data":{
+      "guid":"c95b36ba-5adb-480d-b8da-87fc7598d2da",
+      "domain_name":"ad.labdomain.com",
+      "selected_group_containers":[
+         {
+            "guid":"d9b2392d-01e5-4e8b-98bf-26fb85a3399c",
+            "path":"ad.labdomain.com/CLIENTS",
+            "name":"CLIENTS",
+            "dn":"OU=CLIENTS,DC=ad,DC=labdomain,DC=com"
+         },
+         {
+            "guid":"a79fcd99-07e2-4c75-a615-58043fd244da",
+            "path":"ad.labdomain.com/GROUPS/VPN_USERS",
+            "name":"VPN_USERS",
+            "dn":"CN=VPN_USERS,OU=GROUPS,DC=ad,DC=labdomain,DC=com"
+         },
+         {
+            "guid":"83658fae-a526-4d9e-8030-8193a7fa0198",
+            "path":"ad.labdomain.com/GROUPS/ZTNA_USERS",
+            "name":"ZTNA_USERS",
+            "dn":"CN=ZTNA_USERS,OU=GROUPS,DC=ad,DC=labdomain,DC=com"
+         },
+         {
+            "guid":"015eb230-26f7-4a10-bde7-df92b0891848",
+            "path":"ad.labdomain.com/SERVERS",
+            "name":"SERVERS",
+            "dn":"OU=SERVERS,DC=ad,DC=labdomain,DC=com"
+         }
+      ],
+      "sync_mins":60
+   }
+}

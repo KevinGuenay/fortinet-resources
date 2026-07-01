@@ -1,0 +1,38 @@
+{
+   "result":{
+      "retval":1,
+      "message":null
+   },
+   "data":{
+      "total":1,
+      "invitations":[
+         {
+            "id":3,
+            "name":"API-INVITATION-INSTALLER",
+            "comments":"Invitation created via APIs",
+            "invitation_code":"_VjE6MTkyLjE2OC4xLjIwODo4MDEzOmRlZmF1bHQ6NzVhMWEwM2QtODAxMC00N2IyLTk0YWEtYzk5ZTY5ZjAyZDdh",
+            "is_bulk":true,
+            "has_email_notifications":false,
+            "email_recipients":[
+               
+            ],
+            "expiry_date":null,
+            "listen_address":"192.168.1.208:8013",
+            "assignable_installer_id":68,
+            "email_template_id":1,
+            "email_template_name":"Default Email Template",
+            "authentication_type":2,
+            "domain_name":"ad.labdomain.com",
+            "domain_type":1,
+            "user_name":null,
+            "disabled_state":0,
+            "saml_config_name":null,
+            "saml_config_id":null,
+            "group_assignment_rule_id":null,
+            "assignable_installer_name":"INVITATION-INSTALLER",
+            "assignable_installer_folder":"invitation-installer"
+         }
+      ],
+      "is_smtp_configured":false
+   }
+}

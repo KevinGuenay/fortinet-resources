@@ -1,0 +1,44 @@
+{
+   "result":{
+      "retval":1,
+      "message":null
+   },
+   "data":{
+      "tag_name":"ZTNA-TAG_API",
+      "tag_type":1,
+      "client_count":0,
+      "description":"This is the User Notification Message",
+      "detection_level":"",
+      "tag_id":81,
+      "status":true,
+      "comments":"Created using the API",
+      "use_custom_logic":false,
+      "logic_windows":"{\"op\": \"and\", \"rules\": [{\"id\": 1}, {\"id\": 2}]}",
+      "logic_mac":null,
+      "logic_linux":null,
+      "logic_ios":null,
+      "logic_android":null,
+      "error_msg":null,
+      "tag_detection_type":null,
+      "rules":[
+         {
+            "id":1,
+            "os":1,
+            "type":1,
+            "negative":false,
+            "content":"VPN_USERS",
+            "context":"a79fcd99-07e2-4c75-a615-58043fd244da",
+            "fct_based":true,
+            "domain_name":"ad.labdomain.com"
+         },
+         {
+            "id":2,
+            "os":1,
+            "type":4,
+            "negative":false,
+            "content":"C:\\temp\\file2.txt",
+            "context":""
+         }
+      ]
+   }
+}

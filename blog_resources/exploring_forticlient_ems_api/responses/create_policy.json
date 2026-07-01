@@ -1,0 +1,9 @@
+{
+   "result":{
+      "retval":1,
+      "message":"Endpoint policy created successfully."
+   },
+   "data":{
+      "warning":null
+   }
+}

@@ -1,0 +1,17 @@
+{
+   "result":{
+      "retval":1,
+      "message":null
+   },
+   "data":{
+      "cns":[
+         "FGT70GSERIAL"
+      ]
+   }
+},
+{
+   "result":{
+      "retval":1,
+      "message":"Fabric device successfully updated."
+   }
+}

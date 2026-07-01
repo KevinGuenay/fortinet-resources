@@ -1,0 +1,17 @@
+{
+   "result":{
+      "retval":1,
+      "message":"Login successful."
+   },
+   "data":{
+      "login_domain":null,
+      "is_password_insecure":false,
+      "site":"Default"
+   }
+},
+{
+   "result":{
+      "retval":1,
+      "message":"Logout successful."
+   }
+}
