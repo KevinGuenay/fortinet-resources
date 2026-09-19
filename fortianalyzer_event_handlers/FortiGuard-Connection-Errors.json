@@ -1,0 +1,215 @@
+{
+    "data": {
+        "basic-handler": [
+            {
+                "auto-raise-incident": 0,
+                "automation-stitch": 0,
+                "content-pack-id": "",
+                "content-pack-uuid": "",
+                "creation-time": 1789564784,
+                "data-selector": "",
+                "description": "Alerts on various FortiGuard connection errors, like no rating servers being reachable, failed DNS resolution of FortiGuard, FortiGuard update problems and problems with the SSL connection to FortiGuard due to invalid certificates.\n\nFortiGuard-Webfilter-Error - 10 lookup errors in 10m\nFortiGuard-DNS-Filter-Error - 10 lookup errors in 10m\nFortiGuard-DNS-Resolution-Error - 5 errors in 10m\nFortiGuard-Updates-Error - 2 errors in 1h\nFortiGuard-Webfilter-URL-Filter-Error - 5 lookup errors in 5m\nFortiGuard-Certificate-Error - 2 errors in 10m",
+                "enable": 1,
+                "enable-time": 0,
+                "handler-id": "c9e_781_9bf_38a",
+                "mitre-info": "",
+                "name": "FortiGuard-Connection-Errors",
+                "notification": "",
+                "protected": 0,
+                "rule": [
+                    {
+                        "aggregate-expr": "COUNT(*) >= 10",
+                        "devtype": 0,
+                        "enable": 1,
+                        "eventstatus": "auto",
+                        "eventtype": null,
+                        "extrainfo": "",
+                        "extrainfo-type": 0,
+                        "filter": [
+                            {
+                                "id": 1,
+                                "key": "logid",
+                                "oper": 0,
+                                "value": "0318012800"
+                            }
+                        ],
+                        "filter-expr": "",
+                        "filter-relation": 1,
+                        "groupby1": "msg",
+                        "groupby2": "",
+                        "groupby3": "",
+                        "indicator": null,
+                        "logtype": "webfilter",
+                        "name": "FortiGuard-Webfilter-Error",
+                        "risk-severity": 4,
+                        "rule-id": "fcc_df2_e0d_f5f",
+                        "severity": 1,
+                        "subject": "A webfilter rating error occurred",
+                        "tags": "",
+                        "thres-duration": 10,
+                        "utmevent": ""
+                    },
+                    {
+                        "aggregate-expr": "COUNT(*) >= 10",
+                        "devtype": 0,
+                        "enable": 1,
+                        "eventstatus": "auto",
+                        "eventtype": null,
+                        "extrainfo": null,
+                        "extrainfo-type": 0,
+                        "filter": [
+                            {
+                                "id": 1,
+                                "key": "logid",
+                                "oper": 0,
+                                "value": "1501054801"
+                            }
+                        ],
+                        "filter-expr": "",
+                        "filter-relation": 1,
+                        "groupby1": "msg",
+                        "groupby2": "",
+                        "groupby3": "",
+                        "indicator": null,
+                        "logtype": "dns",
+                        "name": "FortiGuard-DNS-Filter-Error",
+                        "risk-severity": 4,
+                        "rule-id": "2d1_58a_1fe_d81",
+                        "severity": 1,
+                        "subject": "A DNS filter rating error occurred",
+                        "tags": "",
+                        "thres-duration": 10,
+                        "utmevent": ""
+                    },
+                    {
+                        "aggregate-expr": "COUNT(*) >= 5",
+                        "devtype": 0,
+                        "enable": 1,
+                        "eventstatus": "auto",
+                        "eventtype": null,
+                        "extrainfo": null,
+                        "extrainfo-type": 0,
+                        "filter": [
+                            {
+                                "id": 1,
+                                "key": "logid",
+                                "oper": 0,
+                                "value": "0100038404"
+                            }
+                        ],
+                        "filter-expr": "",
+                        "filter-relation": 1,
+                        "groupby1": "msg",
+                        "groupby2": "",
+                        "groupby3": "",
+                        "indicator": null,
+                        "logtype": "event",
+                        "name": "FortiGuard-DNS-Resolution-Error",
+                        "risk-severity": 4,
+                        "rule-id": "e28_fc4_d5b_a01",
+                        "severity": 1,
+                        "subject": "The FortiGuard DNS hostname is not resolvable",
+                        "tags": "",
+                        "thres-duration": 10,
+                        "utmevent": "_any_"
+                    },
+                    {
+                        "aggregate-expr": "COUNT(*) >= 2",
+                        "devtype": 0,
+                        "enable": 1,
+                        "eventstatus": "auto",
+                        "eventtype": null,
+                        "extrainfo": null,
+                        "extrainfo-type": 0,
+                        "filter": [
+                            {
+                                "id": 1,
+                                "key": "logid",
+                                "oper": 0,
+                                "value": "0100041001"
+                            }
+                        ],
+                        "filter-expr": "",
+                        "filter-relation": 1,
+                        "groupby1": "msg",
+                        "groupby2": "",
+                        "groupby3": "",
+                        "indicator": null,
+                        "logtype": "event",
+                        "name": "FortiGuard-Updates-Error",
+                        "risk-severity": 4,
+                        "rule-id": "bda_5dd_c97_996",
+                        "severity": 1,
+                        "subject": "FortiGuard update failed",
+                        "tags": "",
+                        "thres-duration": 60,
+                        "utmevent": "_any_"
+                    },
+                    {
+                        "aggregate-expr": "COUNT(*) >= 5",
+                        "devtype": 0,
+                        "enable": 1,
+                        "eventstatus": "auto",
+                        "eventtype": null,
+                        "extrainfo": null,
+                        "extrainfo-type": 0,
+                        "filter": [
+                            {
+                                "id": 1,
+                                "key": "logid",
+                                "oper": 0,
+                                "value": "0318012558"
+                            }
+                        ],
+                        "filter-expr": "",
+                        "filter-relation": 1,
+                        "groupby1": "msg",
+                        "groupby2": "",
+                        "groupby3": "",
+                        "indicator": null,
+                        "logtype": "webfilter",
+                        "name": "FortiGuard-Webfilter-URL-Filter-Error",
+                        "risk-severity": 4,
+                        "rule-id": "175_8aa_532_999",
+                        "severity": 1,
+                        "subject": "A webfilter URL filter rating error occurred",
+                        "tags": "",
+                        "thres-duration": 10,
+                        "utmevent": ""
+                    },
+                    {
+                        "aggregate-expr": "COUNT(*) >= 2",
+                        "devtype": 0,
+                        "enable": 1,
+                        "eventstatus": "auto",
+                        "eventtype": null,
+                        "extrainfo": null,
+                        "extrainfo-type": 0,
+                        "filter": null,
+                        "filter-expr": "logid=0100038410 and msg ~ ^Certificate[[:space:]]is[[:space:]]invalid.*",
+                        "filter-relation": 1,
+                        "groupby1": "msg",
+                        "groupby2": "",
+                        "groupby3": "",
+                        "indicator": null,
+                        "logtype": "event",
+                        "name": "FortiGuard-Certificate-Error",
+                        "risk-severity": 4,
+                        "rule-id": "71f_49b_5e3_014",
+                        "severity": 1,
+                        "subject": "A FortiGuard SSL connection error occurred due to an invalid certificate",
+                        "tags": "",
+                        "thres-duration": 10,
+                        "utmevent": "_any_"
+                    }
+                ],
+                "template-url": "",
+                "update-time": 1789847270,
+                "uuid": "",
+                "version": 2
+            }
+        ]
+    },
+    "data-type": "txt",
+    "length": 4429
+}
