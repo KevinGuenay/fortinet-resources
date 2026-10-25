@@ -1,0 +1,1 @@
+# Associated blog post: [Quick tips: Automating FortiClient EMS certificates with the API](https://blog.guenay.at/2026/10/24/quick-tips-automating-forticlient-ems-certificates-with-the-api/)
